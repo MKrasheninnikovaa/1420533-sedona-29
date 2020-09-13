@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Марина](https://up.htmlacademy.ru/htmlcss/29/user/1420533).
-* Наставник: `Неизвестно`.
+* Наставник: `[Александр Лесухин](https://htmlacademy.ru/profile/caneklis)`.
 
 ---
 
