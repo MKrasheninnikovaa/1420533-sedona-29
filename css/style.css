@@ -3,14 +3,14 @@
 :root {
   --basic-black: #000000;
   --basic-white: #ffffff;
-  --basic-light-blue: #81B3D3;
+  --basic-blue: #81B3D3;
   --basic-light-grey: #EEEEEE;
   --basic-grey: #CACACA;
   --basic-dark-grey: #333333;
   --basic-brown: #766357;
 
-  --special: #669EC0;
-  --special: #5496BD;
+  --hover-blue: #669EC0;
+  --focus-blue: #5496BD;
   --special: #F2F2F2;
   --special: #EBEBEB;
   --special: #604E43;
@@ -115,7 +115,6 @@ img {
 /* Main footer */
 
 .main-footer {
-  color: var(--basic-black);
   background-color: var(--basic-white);
 }
 
@@ -130,20 +129,19 @@ img {
 /* Social button */
 
 .social-button {
-  color: inherit;
+	background-color: var(--basic-light-blue);
 }
 
 .social-button:hover {
-  color: #669EC0;
+	background-color: var(--hover-blue);
 }
 
-.social-button:focus {
-  color: #5496BD;
+.social-button:active {
+	background-color: var(--focus-blue);
 }
 
-.footer-copyright .button:hover{
-  color: #81B3D2;
-}
-.footer-copyright .button:focus {
-  color: #EBEBEB;
+/* Copyright */
+
+.footer-copyright {
+	line-height: 26px;
 }
