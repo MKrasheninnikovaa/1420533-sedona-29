@@ -1,0 +1,149 @@
+/* Variables */
+
+:root {
+  --basic-black: #000000;
+  --basic-white: #ffffff;
+  --basic-light-blue: #81B3D3;
+  --basic-light-grey: #EEEEEE;
+  --basic-grey: #CACACA;
+  --basic-dark-grey: #333333;
+  --basic-brown: #766357;
+
+  --special: #669EC0;
+  --special: #5496BD;
+  --special: #F2F2F2;
+  --special: #EBEBEB;
+  --special: #604E43;
+  --special: #503E33;
+}
+
+/* Global */
+
+body {
+  min-width: 960px;
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 700;
+  color: var(--basic-black);
+  text-transform: uppercase;
+  background-color: var(--basic-white);
+  background-image: url("../img/bg.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.main-navigation {
+  font-size: 14px;
+  line-height: 26px;
+  color: var(--basic-white);
+  background-color: transparent;
+}
+
+.site-navigation {
+  list-style: none;
+}
+
+.site-navigation-current a:not([href]) {
+  background-color: var(--basic-white);
+}
+
+/* User navigation */
+
+.site-navigation a {
+  color: var(--basic-black);
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus;
+
+/* Features */
+
+.features-list {
+  list-style: none;
+}
+
+.feature-item h3{
+  text-align: center;
+  font-size: 21px;
+  line-height: 21px;
+}
+
+.feature-item h4 {
+  text-align: center;
+  font-size: 21px;
+  line-height: 21px;
+}
+
+.feature-item p {
+  text-align: center;
+}
+
+/* Button */
+
+.button {
+  font: inherit;
+  text-align: center;
+  color: var(--basic-white);
+  border: none;
+}
+
+.button:hover {
+  color: var(--basic-light-blue);
+}
+
+.button:focus {
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+
+.button:active {
+  color: var(--basic-brown);
+}
+
+/* Main footer */
+
+.main-footer {
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+}
+
+.footer-social {
+  text-align: center;
+}
+
+.footer-social ul {
+  list-style: none;
+}
+
+/* Social button */
+
+.social-button {
+  color: inherit;
+}
+
+.social-button:hover {
+  color: #669EC0;
+}
+
+.social-button:focus {
+  color: #5496BD;
+}
+
+.footer-copyright .button:hover{
+  color: #81B3D2;
+}
+.footer-copyright .button:focus {
+  color: #EBEBEB;
+}
