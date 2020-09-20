@@ -1,30 +1,37 @@
 /* Variables */
 
 :root {
-  --basic-black: #000000;
-  --basic-white: #ffffff;
-  --opacity-white: rgba(255, 255, 255, 0.3);
-  --footer-background-white: rgba(255, 255, 255, 0.9);
-    
-  --basic-blue: #81B3D3;
-  --hover-blue: #669EC0;
-  --focus-blue: #5496BD;
-    
-  --basic-brown: #766357;
-  --hover-brown: #604E43;
-  --focus-brown: #503E33;
-    
-  --basic-light-grey: #EEEEEE;
-  --basic-dark-grey: #333333;
-  --basic-grey: #F2F2F2;
-  --hover: #EBEBEB;
-  --arrow-grey: #CACACA;
+	--basic-black: #000000;
+	--basic-white: #FFFFFF;
+	--opacity-white: rgba(255, 255, 255, 0.3);
+	--footer-background-white: rgba(255, 255, 255, 0.9);
+
+	--basic-blue: #81B3D2;
+	--hover-blue: #669EC0;
+	--active-blue: #5496BD;
+	--light-blue: #D8E9F1;
+
+	--basic-brown: #766357;
+	--hover-brown: #604E43;
+	--active-brown: #503E33;
+
+	--extra-dark-gray: #333333;
+	--dark-gray: #666666;
+	--gray: #EEEEEE;
+	--light-gray: #E5E5E5;
+	--background-gray: #F2F2F2;
+
+	--checkbox-disabled-gray: #6A6A6A;
+	--slider-gray: #ABABAB;
+	--arrow-gray: #CACACA;
+	--field-hover-gray: #EBEBEB;
+	--icon-gray: #A9A9A9;
+
+	--active-copyright-logo: #231F20;
 }
 
-/* Global */
-
-body {
-  min-width: 960px;
+.page-body {
+	min-width: 960px;
 	margin: 0;
 	padding: 0;
 	font-family: "PT Sans", Arial, sans-serif;
@@ -32,15 +39,15 @@ body {
 	line-height: 21px;
 	color: var(--basic-black);
 	text-transform: uppercase;
-	background-color: var(--basic-white);
+	background-color: var(--background-gray);
 }
 
 a {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 img {
-  max-width: 100%;
+ 	max-width: 100%;
   height: auto;
 }
 
@@ -50,6 +57,10 @@ img {
   width: 1px;
   height: 1px;
  	margin: -1px;
+}
+
+.clear-list {
+  list-style: none;
 }
 
 /* Main header */
@@ -70,7 +81,7 @@ img {
 	color: var(--basic-blue);
 }
 
-.site-navigation a:focus {
+.site-navigation a:active {
 	color: var(--basic-black);
 	opacity: 0.3;
 }
@@ -79,7 +90,24 @@ img {
 	color: var(--basic-brown);
 }
 
-.container {
+/* Wrapper */
+
+.wrapper {
+	background-color: var(--basic-white);
+}
+
+/* First screen*/
+
+.first-screen {
+	background-color: var(--light-blue);
+}
+
+/* Opening */
+
+.features-opening {
+	font-weight: 700;
+	font-size: 21px;
+	line-height: 26px;
 	text-align: center;
 }
 
@@ -89,16 +117,13 @@ img {
 	text-align: center;
 }
 
-.features-item {
-	text-align: center;
-}
-
+.features-item,
 .features-special-item {
 	text-align: center;
 }
 
 .features-item {
-	background-color: var(--basic-light-grey);
+	background-color: var(--gray);
 }
 
 .features-special-item {
@@ -106,13 +131,20 @@ img {
 	color: var(--basic-white);
 }
 
+.features-item h3,
+.features-special-item h3 {
+	font-weight: 700;
+	font-size: 21px;
+}
+
+/* Recomendation */
+
 .recomendation h3 {
 	font-weight: 700;
 	font-size: 21px;
 }
 
 .recomendation-item {
-    color: var(--basic-black);
 	background-color: var(--basic-white);
 }
 
@@ -128,24 +160,85 @@ img {
 	cursor: pointer;
 }
 
+/* Hotel search */
+
+.hotel-search {
+	text-align: center;
+}
+
+.hotel-search-opening {
+	font-weight: 700;
+	font-size: 30px;
+	line-height: 24px;
+}
+
+.hotel-search-button {
+	font-size: 21px;
+	line-height: 26px;
+	background-color: var(--basic-brown);
+}
+
+.hotel-search-button:hover {
+	background-color: var(--hover-brown);
+}
+
+.hotel-search-button:focus {
+	color: var(--opacity-white);
+	background-color: var(--active-brown);
+}
+
+/* Search form */
+.form {
+	text-align: center;
+	background-color: var(--basic-white);
+}
+
+.form-button {
+	background-color: var(--basic-blue);
+}
+
+.form-button:hover {
+	background-color: var(--hover-blue);
+}
+
+.form-button:focus {
+	background-color: var(--active-blue);
+	color: var(--opacity-white);
+}
+
 /* Main footer */
 
 .main-footer {
-  background-color: var(--basic-white);
+	background-color: var(--footer-background-white);
 }
 
-.footer-social {
-  text-align: center;
+.footer-contacts {
+	text-align: center;
 }
 
-.footer-social ul {
-  list-style: none;
+.footer-contacts a {
+	font-size: 21px;
+	line-height: 26px;
+	color: var(--basic-black);
 }
 
-/* Social button */
+.footer-contacts a:hover {
+	color: var(--basic-blue);
+}
+
+.footer-contacts a:focus {
+	color: var(--basic-black);
+	opacity: 0.3;
+}
+
+.footer-contacts a:not([href]) {
+	color: var(--basic-brown);
+}
+
+/* Socials */
 
 .social-button {
-	background-color: var(--basic-light-blue);
+	background-color: var(--basic-blue);
 }
 
 .social-button:hover {
@@ -153,7 +246,7 @@ img {
 }
 
 .social-button:active {
-	background-color: var(--focus-blue);
+	background-color: var(--active-blue);
 }
 
 /* Copyright */
