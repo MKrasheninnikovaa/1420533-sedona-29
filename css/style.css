@@ -1,46 +1,45 @@
 /* Variables */
-
-:root {
-	--basic-black: #000000;
+: root {
+  --basic - black: #000000;
     --opacity-black: rgba(0, 0, 0, 0.3);
-	--basic-white: #FFFFFF;
-	--opacity-white: rgba(255, 255, 255, 0.3);
-	--footer-background-white: rgba(255, 255, 255, 0.9);
+	--basic-white: # FFFFFF;
+  --opacity - white: rgba(255, 255, 255, 0.3);
+  --footer - background - white: rgba(255, 255, 255, 0.9);
+  --basic - blue: #81B3D2;
+	--hover-blue: # 669E C0;
+  --active - blue: #5496BD;
+	--light-blue: # D8E9F1;
+  --basic - brown: #766357;
+	--hover-brown: # 604E43;
+  --active - brown: #503E33;
 
-	--basic-blue: #81B3D2;
-	--hover-blue: #669EC0;
-	--active-blue: #5496BD;
-	--light-blue: #D8E9F1;
-
-	--basic-brown: #766357;
-	--hover-brown: #604E43;
-	--active-brown: #503E33;
-
-	--extra-dark-gray: #333333;
-	--dark-gray: #666666;
-	--gray: #EEEEEE;
-	--light-gray: #E5E5E5;
-	--background-gray: #F2F2F2;
-
-	--checkbox-disabled-gray: #6A6A6A;
-	--slider-gray: #ABABAB;
-	--arrow-gray: #CACACA;
-	--field-hover-gray: #EBEBEB;
-	--icon-gray: #A9A9A9;
-
-	--active-copyright-logo: #231F20;
+	--extra-dark-gray: # 333333;
+  --dark - gray: #666666;
+	--gray: # EEEEEE;
+  --light - gray: #E5E5E5;
+  --background - gray: #F2F2F2;
+  --checkbox - disabled - gray: #6A6A6A;
+	--slider-gray: # ABABAB;
+  --arrow - gray: #CACACA;
+  --field - hover - gray: #EBEBEB;
+  --icon - gray: #A9A9A9;
+  --active - copyright - logo: #231F20;
 }
 
+/* Global */
+
 .page-body {
-	min-width: 960px;
-	margin: 0;
-	padding: 0;
+	min-width: 1280px;
+	min-height: 100%;
 	font-family: "PT Sans", Arial, sans-serif;
 	font-size: 14px;
 	line-height: 21px;
 	color: var(--basic-black);
+    background-color: var(--background-gray);
 	text-transform: uppercase;
-	background-color: var(--background-gray);
+	display: grid;
+	grid-template-rows: min-content 1fr min-content;
+	align-content: start;
 }
 
 a {
@@ -55,22 +54,74 @@ img {
 .visually-hidden {
 	position: absolute;
   clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
+	width: 1px;
+	height: 1px;
  	margin: -1px;
 }
 
 .clear-list {
   list-style: none;
+    margin: 0;
+  padding: 0;
+}
+
+/* Wrapper */
+
+.wrapper {
+  background-color: var(--basic-white);
+  max-width: 1200px;
+  min-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Main header */
 
 .main-header {
-	background-color: var(--basic-white);
+	background-color: transparent;
+}
+/* Logo */
+
+.main-logo {
+    position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 50%;
+  margin-left: -69px;
 }
 
 /* Navigation*/
+
+.main-navigation {
+	background-color: var(--basic-white);
+  /*padding: 0 73px;*/
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.site-navigation {
+  display: flex;
+}
+
+.site-navigation li {
+  width: 25%;
+  box-sizing: border-box;
+  padding: 15px 0;
+}
+
+.site-navigation li:first-child {
+  padding-left: 73px;
+}
+
+.site-navigation li:last-child {
+  padding-right: 73px;
+}
+
 
 .site-navigation a {
 	color: var(--basic-black);
@@ -90,21 +141,20 @@ img {
 	color: var(--basic-brown);
 }
 
-/* Wrapper */
-
-.wrapper {
-	background-color: var(--basic-white);
-}
-
 /* First screen*/
 
 .first-screen {
 	background-color: var(--light-blue);
+    text-align: center;
 }
 
 /* Opening */
 
 .features-opening {
+    height: 216px;
+}
+
+.features-opening-header {
 	font-weight: 700;
 	font-size: 21px;
 	line-height: 26px;
@@ -114,11 +164,6 @@ img {
 /* Features */
 
 .features {
-	text-align: center;
-}
-
-.features-item,
-.features-special-item {
 	text-align: center;
 }
 
@@ -137,6 +182,30 @@ img {
 	font-size: 21px;
 }
 
+.features-picture-right,
+.features-picture-left,
+.feature-item-wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 256px;
+}
+
+.features-picture-right .feature-item-card {
+	grid-column: 1 / 2;
+}
+
+.features-picture-right img {
+	grid-column: 2 / span 2;
+}
+
+.features-picture-left .feature-item-card {
+	grid-column: 3 / 4;
+}
+
+.features-picture-left img {
+	grid-column: 1 / span 2;
+}
+
 /* Recomendation */
 
 .recomendation h3 {
@@ -146,6 +215,12 @@ img {
 
 .recomendation-item {
 	background-color: var(--basic-white);
+}
+
+.recomendation {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 330px;
 }
 
 /* Button */
@@ -210,6 +285,14 @@ img {
 
 .main-footer {
 	background-color: var(--footer-background-white);
+}
+
+.main-footer-wrapper {
+  padding: 0 73px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 120px;
+  column-gap: 37px;
 }
 
 .footer-contacts {
