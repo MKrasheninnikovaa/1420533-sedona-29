@@ -5,10 +5,12 @@
   --basic-white: #FFFFFF;
   --opacity-white: rgba(255, 255, 255, 0.3);
   --footer-background-white: rgba(255, 255, 255, 0.9);
+    
   --basic-blue: #81B3D2;
   --hover-blue: #669EC0;
   --active-blue: #5496BD;
   --light-blue: #D8E9F1;
+    
   --basic-brown: #766357;
   --hover-brown: #604E43;
   --active-brown: #503E33;
@@ -18,11 +20,13 @@
   --gray: #EEEEEE;
   --light-gray: #E5E5E5;
   --background-gray: #F2F2F2;
+    
   --checkbox-disabled-gray: #6A6A6A;
   --slider-gray: #ABABAB;
   --arrow-gray: #CACACA;
   --field-hover-gray: #EBEBEB;
   --icon-gray: #A9A9A9;
+    
   --active-copyright-logo: #231F20;
 }
 
@@ -53,7 +57,7 @@ img {
 
 .visually-hidden {
 	position: absolute;
-  clip: rect(0 0 0 0);
+    clip: rect(0 0 0 0);
 	width: 1px;
 	height: 1px;
  	margin: -1px;
