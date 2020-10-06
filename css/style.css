@@ -151,7 +151,7 @@ img {
 /* Opening */
 
 .features-opening {
-    height: 216px;
+    min-height: 216px;
 }
 
 .features-opening-header {
