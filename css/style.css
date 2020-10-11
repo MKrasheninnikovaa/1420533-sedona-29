@@ -151,6 +151,7 @@ img {
 
 .first-screen {
     background-color: var(--light-blue);
+    background-image: url(../img/background-first-screen.jpg);
     height: 509px;
     display: flex;
 }
@@ -207,7 +208,6 @@ img {
 .features-list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 256px 330px 256px 256px;
 }
 
 .features-picture-right {
