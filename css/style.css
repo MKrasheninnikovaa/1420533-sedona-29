@@ -2,6 +2,8 @@
 :root {
     --basic-black: #000000;
     --opacity-black: rgba(0, 0, 0, 0.3);
+    --shadow: rgba(0, 1, 1, 0.2);
+    
     --basic-white: #FFFFFF;
     --opacity-white: rgba(255, 255, 255, 0.3);
     --footer-background-white: rgba(255, 255, 255, 0.9);
@@ -27,7 +29,7 @@
     --field-hover-gray: #EBEBEB;
     --icon-gray: #A9A9A9;
 
-    --active-copyright-logo: #231F20;
+    --academy-logo-gray: #BDBBBC;
 }
 
 /* Global */
@@ -73,9 +75,15 @@ img {
     max-width: 1200px;
     min-width: 1200px;
     margin: 0 auto;
+    position: relative;
     display: grid;
     grid-template-rows: min-content 1fr min-content;
     align-content: start;
+    box-shadow: 0px 5px 15px var(--shadow);
+}
+
+.page-content {
+    margin-bottom: -120px;
 }
 
 /* Main header */
@@ -91,7 +99,7 @@ img {
     z-index: 1;
     top: 0;
     left: 50%;
-    margin-left: -69px;
+    transform: translate(-50%);
 }
 
 /* Navigation*/
@@ -109,7 +117,7 @@ img {
 
 .site-navigation li {
     width: 25%;
-    padding: 15px 0;
+    padding: 14px 0 16px;
     box-sizing: border-box;
 }
 
@@ -151,20 +159,32 @@ img {
 
 .first-screen {
     background-color: var(--light-blue);
+    background-image: url("../img/background-first-screen.jpg");
     background-image: url(../img/background-first-screen.jpg);
     height: 509px;
     display: flex;
+    position: relative;
+}
+
+.first-screen::after {
+    content: "";
+    width: 100%;
+    height: 56px;
+    background-image: url("../img/shape.svg");
+    position: absolute;
+    bottom: 0;
 }
 
 .first-screen img {
-    margin: auto;
+    height: 350px;
+    margin: 77px auto;
 }
 
 /* Opening */
 
 .features-opening {
     padding-top: 41px;
-    padding-bottom: 53px;
+    padding-bottom: 54px;
 }
 
 .features-opening-header {
@@ -172,7 +192,7 @@ img {
     font-size: 21px;
     line-height: 27px;
     max-width: 519px;
-    margin: 0 auto 46px;
+    margin: 0 auto 45px;
 }
 
 .features-opening-text {
@@ -239,7 +259,7 @@ img {
 
 .feature-item-card p,
 .features-item p {
-    margin-top: 21px;
+    margin-top: 22px;
 }
 
 /* Recomendation */
@@ -253,6 +273,7 @@ img {
 .recomendation-item {
     background-color: var(--basic-white);
     padding: 158px 52px 81px;
+    position: relative;
 }
 
 .recomendation-item h3 {
@@ -266,6 +287,39 @@ img {
     margin: 0;
 }
 
+.booking::before {
+    content: "";
+    width: 75px;
+    height: 72px;
+    background-image: url("../img/icon-house.svg");
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 60px;
+    left: 163px;
+}
+
+.food::before {
+    content: "";
+    width: 75px;
+    height: 72px;
+    background-image: url("../img/icon-burger.svg");
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 60px;
+    left: 163px;
+}
+
+.gifts::before {
+    content: "";
+    width: 64px;
+    height: 77px;
+    background-image: url("../img/icon-gift.svg");
+    position: absolute;
+    background-repeat: no-repeat;
+    top: 56px;
+    left: 168px;
+}
+
 /* Button */
 
 .button {
@@ -275,6 +329,7 @@ img {
     text-transform: uppercase;
     border: none;
     cursor: pointer;
+    outline: none;
 }
 
 /* Hotel search */
@@ -318,13 +373,158 @@ img {
 }
 
 /* Modal of main page */
+
 .modal {
-    text-align: center;
+    font-weight: 700;
     background-color: var(--basic-white);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    box-shadow: 0px 7px 15px var(--shadow);
+    box-sizing: border-box;
+    width: 570px;
+    padding: 54px 55px 55px;
+}
+
+.modal-element-in {
+    position: relative;
+    margin: 0 auto 29px;
+}
+
+.modal-element-out {
+    position: relative;
+    margin: 0 auto 30px;
+}
+
+.modal-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-element-adults {
+    width: 226px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.modal-element-children {
+    width: 179px;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.modal-input {
+    font: inherit;
+    border: none;
+    background-color: var(--background-gray);
+    box-sizing: border-box;
+    padding: 6px 12px;
+    text-transform: uppercase;
+}
+
+.modal-input::placeholder {
+    color: inherit;
+}
+
+.modal-input:hover {
+    background-color: var(--field-hover-gray);
+}
+
+.modal-input:focus,
+.modal-input:active {
+    background-color: transparent;
+    border: 2px solid var(--light-gray);
+    outline: none;
+}
+
+.input-adults,
+.input-children {
+    width: 38px;
+    height: 38px;
+    text-align: center;
+}
+
+.input-in,
+.input-out {
+    width: 346px;
+    height: 38px;
+}
+
+.calendar {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    position: absolute;
+    top: 7px;
+    right: 4px;
+}
+
+.calendar:hover path {
+    fill: var(--basic-black);
+}
+
+.calendar:active path {
+    fill: var(--basic-blue);
+}
+
+.minus,
+.plus {
+    background-color: var(--background-gray);
+    border: none;
+    outline: none;
+    width: 38px;
+    height: 38px;
+}
+
+.minus svg,
+.plus svg {
+    vertical-align: middle;
+}
+
+.minus:hover rect {
+    fill: var(--basic-black);
+}
+
+.minus:active rect {
+    fill: var(--basic-blue);
+}
+
+.plus:hover path {
+    fill: var(--basic-black);
+}
+
+.plus:active path {
+    fill: var(--basic-blue);
+}
+
+.modal-element-in label {
+    margin-right: 21px;
+}
+
+.modal-element-out label {
+    margin-right: 17px;
+}
+
+.modal-element-adults label {
+    margin-right: 42px;
+}
+
+.modal-element-children label {
+    margin-right: 27px;
 }
 
 .modal-button {
+    font-size: 21px;
+    line-height: 26px;
     background-color: var(--basic-blue);
+    width: 100%;
+    display: block;
+    padding: 16px 0;
+    margin-top: 55px;
 }
 
 .modal-button:hover {
@@ -338,17 +538,22 @@ img {
 
 /* Map */
 
+.map {
+    position: relative;
+    overflow: hidden;
+}
+
 .map img {
     width: 1200px;
     height: 594px;
     display: block;
-    margin-bottom: -120px;
 }
 
 /* Main footer */
 
 .main-footer {
     background-color: var(--footer-background-white);
+    z-index: 1;
 }
 
 .main-footer-wrapper {
@@ -371,18 +576,6 @@ img {
     color: var(--basic-black);
     display: block;
     margin-bottom: 15px;
-}
-
-.footer-contacts a:hover {
-    color: var(--basic-blue);
-}
-
-.footer-contacts a:focus {
-    color: var(--opacity-black);
-}
-
-.footer-contacts a:not([href]) {
-    color: var(--basic-brown);
 }
 
 /* Socials */
@@ -420,6 +613,10 @@ img {
     background-color: var(--active-blue);
 }
 
+.social-button:active path {
+    opacity: 0.3;
+}
+
 /* Copyright */
 
 .footer-copyright {
@@ -429,6 +626,19 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.footer-copyright-link {
+    display: block;
+    margin-top: 3px;
+}
+
+.footer-copyright-link:hover path {
+    fill: var(--basic-blue);
+}
+
+.footer-copyright-link:active path {
+    fill: var(--academy-logo-gray);
 }
 
 /* Hotels page */
