@@ -160,7 +160,6 @@ img {
 .first-screen {
     background-color: var(--light-blue);
     background-image: url("../img/background-first-screen.jpg");
-    background-image: url(../img/background-first-screen.jpg);
     height: 509px;
     display: flex;
     position: relative;
